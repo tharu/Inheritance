@@ -5,7 +5,7 @@ String.prototype.filter = function (...bannedWords) {
         const index = str.indexOf(word);
         if (index >= 0) {
             // str = str.replace(word, "");
-            const regex = new RegExp(word + "\s?");
+            const regex = new RegExp(word + "\\s?");
             str = str.replace(regex, "");
         }
     }
@@ -15,8 +15,8 @@ String.prototype.filter = function (...bannedWords) {
     return str;
 }
 
-let myString="some bad string";
-console.log(myString.filter("bad"));
+// let myString="some bad string";
+// console.log(myString.filter("bad"));
 
 
 Array.prototype.bubbleSort=function()
@@ -45,8 +45,8 @@ Array.prototype.bubbleSort=function()
     
 
 
-let array=[6,4,0, 3,-2,1];
-console.log([6,4,0, 3,-2,1].bubbleSort());
+// let array=[6,4,0, 3,-2,1];
+  console.log([6,4,0, 3,-2,1].bubbleSort());
 
 var Person = function() {};
 Person.prototype.initialize = function(name, age)

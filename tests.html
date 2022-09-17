@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- add mocha css, to show results -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+    let expect = chai.expect;
+  </script>
+</head>
+
+<body>
+
+  <script>
+    
+
+    describe("filterbannedwords", function(){
+        it("filter banned words", function(){
+           assert.equal("some bad string".filter("bad"), "some string"); 
+        });
+    });
+
+    describe("bubblesort", function(){
+        it("array bubble sort", function()
+        {
+        
+          expect([-2, 0, 1, 3, 4, 6]).to.eql([6, 4, 0, 3, -2, 1].bubbleSort());
+        
+        });
+      });
+
+    describe("testinheritance", function(){
+        it("test inheritance", function(){
+          var teacher1= new Teacher();
+          teacher1.initialize("Jen",23);
+           assert.equal(teacher1.teach("Maths"), "Jen is now teaching Maths"); 
+        });
+    });
+    
+  </script>
+
+  <!-- the script with tests (describe, it...) -->
+  <script src="index.js"></script>
+
+  <!-- the element with id="mocha" will contain test results -->
+  <div id="mocha"></div>
+
+  <!-- run tests! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>
