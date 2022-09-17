@@ -72,3 +72,4 @@ Teacher.prototype.teach= function(subject)
 var teacher1= new Teacher();
 teacher1.initialize("Jen",23);
 console.log(teacher1.teach("Maths"));
+
